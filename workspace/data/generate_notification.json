@@ -1,0 +1,13 @@
+{
+    "urls": {
+        "[AtM]": "https://www.amazon.com/Introduction-Commutative-Algebra-Addison-Wesley-Mathematics/dp/0201407515",
+        "[GM]": "https://link.springer.com/book/10.1007/978-3-662-12492-5",
+        "[Ser]": "https://link.springer.com/book/10.1007/978-1-4684-9458-7",
+        "[Lang]": "https://link.springer.com/book/10.1007/978-1-4613-0041-0",
+        "[DF]": "https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347",
+        "Class": ""
+    },
+    "hw_item_format": "<li>{head} {mid} from {tail}.</li>",
+    "href_settings": "<a class=\"inline_disabled\" style=\"color: crimson;\" target=\"_blank\" rel=\"noopener\" href=\"{url}\">{label}</a>",
+    "no_need": "(you DO NOT need to submit this item)"
+}
