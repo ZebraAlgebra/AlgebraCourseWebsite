@@ -10,6 +10,7 @@ I plan to use Python as the primary tool for content generation. This includes:
 3. Automate the process of combining and annotate homework screenshots using `Pillow`.
 4. Using OCR tools in Python to convert images to texts and LaTeX formulae using `pic2tex` and `pytesseract`.
 5. Automate the process of updating all the pages of the site.
+
 The overall expected workflow would be as follows:
 1. Get the info of homework.
 2. Generate notification, and paste it to NTUCOOL.
@@ -20,5 +21,7 @@ The overall expected workflow would be as follows:
 7. Convert `.md` to `.tex` and `.pdf`.
 8. Once the `.png`, `.md`, `.tex`, `.pdf` are ready, update webpages.
 
-## Functionalities
+## Functionalities of the site
 These will be added along the way. As for now, we will only use basic JavaScript to update links and not add other functionalities.
+
+
