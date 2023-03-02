@@ -1,0 +1,19 @@
+<div style="font-family: 'Trebuchet MS', 'Roboto', sans-serif;">
+    <h3>🗓️ <strong>Due Date</strong></h3>
+    <ul style="list-style-type: square;">
+        <li style="text-decoration: underline;">{due_date}</li>
+    </ul>
+    <h3>📝 <strong>Homework Description</strong></h3>
+    <ul style="list-style-type: square;">
+        {hw-item}
+    </ul>
+    <h3>📌 <strong>Submission</strong></h3>
+    <ul style="list-style-type: square;">
+        <li>You may submit your work via COOL's online submission system or hand in your works to TA in class.</li>
+        <li>Late submission is discouraged. The grading of each assignment will take into consideration whether the assignment is submitted on time.</li>
+    </ul>
+    <h3>📂 <strong>Files / Links</strong></h3>
+    <ul style="list-style-type: square;">
+        {links-item}
+    </ul>
+</div>
