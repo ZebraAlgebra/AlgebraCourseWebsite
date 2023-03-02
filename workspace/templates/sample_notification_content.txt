@@ -1,7 +1,7 @@
 <div style="font-family: 'Trebuchet MS', 'Roboto', sans-serif;">
     <h3>🗓️ <strong>Due Date</strong></h3>
     <ul style="list-style-type: square;">
-        <li style="text-decoration: underline;">{due_date}</li>
+        <li style="text-decoration: underline;">{due-date}</li>
     </ul>
     <h3>📝 <strong>Homework Description</strong></h3>
     <ul style="list-style-type: square;">
