@@ -1,4 +1,5 @@
 import os
+import re
 def generate_pdf():
     '''
     Helps the user generate pdf from tex file
@@ -21,9 +22,27 @@ def generate_pdf():
         template = temp.read()
         content = cont.read()
         targ.write(template.replace("$ $", content))
+    prettify_problems(TARGET_DIR_TEX)
+    if os.path.isfile(TARGET_DIR_PDF):
+        os.system(f"rm {TARGET_DIR_PDF}")
     os.system(" ".join(["pdflatex", TARGET_DIR_TEX, TARGET_DIR_PDF]))
-    for suffix in ['aux', 'log', 'out', 'pdf']:
+    for suffix in ['aux', 'log', 'out']:
         os.system(f"rm {hw_id}.{suffix}")
+    os.system(f"mv {hw_id}.pdf {TARGET_DIR_PDF}")
+    return None
+
+def prettify_problems(TARGET_DIR_TEX):
+    header = "\section*{$}\paragraph{}"
+    with open(TARGET_DIR_TEX, 'r') as t, open("temp.txt", 'w') as temp:
+        for line in t:
+            if line[0] == "%":
+                temp.write(header.replace("$", line[2:-1]))
+            else:
+                temp.write(line)
+    with open(TARGET_DIR_TEX, 'w') as t, open("temp.txt", 'r') as temp:
+        for line in temp:
+            t.write(line)
+    os.system("rm temp.txt")
     return None
 
 def main():
