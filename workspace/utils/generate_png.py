@@ -1,6 +1,5 @@
 import os
 from PIL import Image, ImageFont, ImageDraw
-# import PIL
 import inflect
 def generate_png():
     '''
