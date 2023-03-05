@@ -19,6 +19,7 @@ def generate_tex():
 
 def main():
     generate_tex()
+    return None
 
 if __name__ == '__main__':
     main()

@@ -20,6 +20,8 @@ def generate_md():
         old = create_headers_in_md(old, hw_id)
         old = replace_dollars_underlines(old)
         old = replace_enum_items(old)
+        old = replace_dollars_underlines(old)
+        old = replace_enum_items(old)
         target.write(old)
     return None
 
