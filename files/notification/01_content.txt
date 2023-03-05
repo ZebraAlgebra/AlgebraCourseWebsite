@@ -1,7 +1,7 @@
 <div style="font-family: 'Trebuchet MS', 'Roboto', sans-serif;">
     <h3>🗓️ <strong>Due Date</strong></h3>
     <ul style="list-style-type: square;">
-        <li style="text-decoration: underline;">03/03 23:59 (Fri.)</li>
+        <li style="text-decoration: underline;">{due-date}</li>
     </ul>
     <h3>📝 <strong>Homework Description</strong></h3>
     <ul style="list-style-type: square;">
@@ -14,6 +14,9 @@
     </ul>
     <h3>📂 <strong>Files / Links</strong></h3>
     <ul style="list-style-type: square;">
-        {links-item}
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/pdf/01.pdf" data-api-returntype="File">.pdf file</a></li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/tex/01.tex" data-api-returntype="File">.tex file</a> (the <span style="font-family: 'Sourece Sans Pro', sans-serif; background-color: #dddddd;">tikzcd</span> package is required for the commutative diagrams to render correctly in your LaTeX editor in case there are any of them).</li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/png/01.png" data-api-returntype="File">.png file (combined homework screenshot)</a></li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/my-first-book/book/hw/week_01/qtns.html" data-api-returntype="File">web view</a></li>
     </ul>
 </div>
