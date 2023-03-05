@@ -18,11 +18,8 @@ def generate_md():
     with open(TARGET_DIR_TEX, 'w') as target, open(SOURCE_DIR, 'r') as source:
         old = source.read()
         old = create_headers_in_md(old, hw_id)
-        # print(old)
         old = replace_dollars_underlines(old)
-        # print(old)
         old = replace_enum_items(old)
-        print(old)
         target.write(old)
     return None
 
@@ -64,7 +61,6 @@ def replace_enum_items(old):
     new = []
     for line in lines:
         for unsupported_str in unsupported_strs:
-            print(unsupported_str)
             if unsupported_str in line:
                 line = ""
                 continue
