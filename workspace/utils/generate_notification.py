@@ -77,6 +77,13 @@ def generate_notification_content(hw_id, due_date, TARGET_DIR, SOURCE_DIR):
         result = s.read()
         chunk = "\n".join(map(str, home_work_list))
         due_date_str_fine = due_date.strftime("%m/%d %H:%M (%a.)")
+        file_urls = {"{pdf-link}": "https://zebraalgebra.github.io/AlgebraCourseWebsite/files/pdf/{label}.pdf",
+                          "{tex-link}": "https://zebraalgebra.github.io/AlgebraCourseWebsite/files/tex/{label}.tex",
+                          "{png-link}": "https://zebraalgebra.github.io/AlgebraCourseWebsite/files/png/{label}.png",
+                          "{web-link}": "https://zebraalgebra.github.io/AlgebraCourseWebsite/my-first-book/book/hw/week_{label}/qtns.html",}
+        for key in file_urls.keys():
+            file_urls[key] = file_urls[key].replace("{label}", hw_id)
+            result = result.replace(key, file_urls[key])
         t.write(result.replace("{hw-item}", chunk).replace("{due_date}", due_date_str_fine))
     flag = input("Notification content has been generated! do you want to open it? (y/n)\n").lower() == 'y'
     if flag:
