@@ -1,10 +1,9 @@
 # AlgebraCourseWebsite
 
 ## Info
-This website is used to host contents for the [course Algebera II](https://cool.ntu.edu.tw/courses/25046) at NTU in 2023. Basic functionalities of this webside includes hosting the `pdf, tex, png` files of homeworks, and serve as a webview for the contents. This website is built using `mdbook`, a very friendly command line tool (built in Rust!) for generating webpages from `md` files.
+This website is used to host contents for the [course Algebera II](https://cool.ntu.edu.tw/courses/25046) at NTU in 2023. Basic functionalities of this webside includes hosting the `pdf, tex, png` files of homeworks, and serve as a webview for the contents. This website is built using `mdbook`, a very friendly command line tool for generating webpages from `md` files.
 
 ## File Generation Workflow
-I plan to use Python as the primary tool for content generation. This includes:
 1. Automate the process of generating course notifications.
 2. Converting `.md` files to `.tex` and `.pdf` files where the students can use it to write their homeworks in LaTeX.
 3. Automate the process of combining and annotate homework screenshots using `Pillow`.
@@ -16,7 +15,6 @@ The overall expected workflow would be as follows:
 2. Generate notification, and paste it to NTUCOOL.
 3. Get screenshots.
 4. Paste and annotate as one big `.png`.
-5. Convert `.png` to text file.
-6. Double check and manually turn it into a `.md`.
-7. Convert `.md` to `.tex` and `.pdf`.
+5. Convert `.png` to text file and convert it as incomplete `.tex`.
+7. Autocomplete `.tex` and convert to `.md`, `.tex` and `.pdf`.
 8. Once the `.png`, `.md`, `.tex`, `.pdf` are ready, update webpages.
