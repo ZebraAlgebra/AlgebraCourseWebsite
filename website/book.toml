@@ -17,6 +17,10 @@ additional-js = ["config_mathjax_fonts.js", "config_icon.js"]
 [output.html.print]
 enable = false
 
+[output.html.fold]
+enable = true
+level = 1
+
 [output.html.playground]
 enable = false
 
