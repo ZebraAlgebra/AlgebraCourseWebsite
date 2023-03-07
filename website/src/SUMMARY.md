@@ -7,11 +7,10 @@
 - [Glossary of Homeworks](./hw/gloss_hw.md)
     - [Week 01](./hw/week_01/home.md)
         - [Questions](./hw/week_01/qtns.md)
-        - [Solutions]()
-        <!-- - [Solutions](./hw/week_01/sltn.md) -->
+        - [Solutions](./hw/week_01/sltn.md)
     - [Week 02](./hw/week_02/home.md)
         - [Questions](./hw/week_02/qtns.md)
-        <!-- - [Solutions](./hw/week_02/sltn.md) -->
+        - [Solutions]()
     <!-- - [Week 03]()
         - [Questions]()
         - [Solutions]() -->
@@ -62,3 +61,5 @@
     - [Colimit and Limits]()
     <!-- - [Colimit and Limits](./notes/colim.md) -->
 ---
+
+[Update and Upload Logs](./logs.md)

@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -82,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html" class="active">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="hw/gloss_hw.html"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.2.</strong> Solutions</div></li></ol></li><li class="chapter-item expanded "><a href="hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html" class="active">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="hw/gloss_hw.html"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><a href="hw/week_01/sltn.html"><strong aria-hidden="true">1.1.2.</strong> Solutions</a></li></ol></li><li class="chapter-item expanded "><a href="hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.2.</strong> Solutions</div></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="logs.html">Update and Upload Logs</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -116,6 +118,9 @@
                     <div class="right-buttons">
                         <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/main/website/src/home.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
                     </div>
@@ -155,12 +160,13 @@
 <li><a href="https://link.springer.com/book/10.1007/978-1-4684-9458-7"><strong>[Ser]</strong></a> Serre, J. P. (1977). <em>Linear representations of finite groups</em> (Vol. 42). New York: springer.</li>
 <li><a href="https://link.springer.com/book/10.1007/978-1-4613-0041-0"><strong>[Lang]</strong></a> Lang, S. (2012). <em>Algebra</em> (Vol. 211). Springer Science &amp; Business Media.</li>
 <li><a href="https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347"><strong>[DF]</strong></a> Dummit, D. S., &amp; Foote, R. M. (2004). <em>Abstract algebra</em> (Vol. 3). Hoboken: Wiley.</li>
+<li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjTj-nZjsn9AhWRUN4KHbhRAuIQFnoECB4QAQ&amp;url=https%3A%2F%2Flink.springer.com%2Fbook%2F10.1007%2F978-1-4612-0979-9&amp;usg=AOvVaw0hzOQK8TKPBI3iIv4Wg1RY"><strong>[FH]</strong></a>, Fulton and Harris, <em>Representation Theory: A First Course</em>, Vol. 129. Springer Science &amp; Business Media, 2013.</li>
 </ul>
 <p>Other supplementary notes are given along the way as the course unfolds.</p>
 <h2 id="about-this-site"><a class="header" href="#about-this-site">About this site</a></h2>
 <p>This is an experiemental site built using <a href="https://github.com/rust-lang/mdBook">mdbook</a>, hosted on GitHub page.</p>
-<p>Due to caching, updates on this site would not be immediately reflected on your browser.</p>
-<p>If you spot any potential errors, please contact via 📧<a href="mailto:r10221026@ntu.edu.tw">r10221026@ntu.edu.tw</a> (or any other way).</p>
+<p>Due to caching, updates on this site would not always be immediately reflected in your browser.</p>
+<p>If you spot any potential errors or want to make any suggestions, please contact via ✉️<a href="mailto:r10221026@ntu.edu.tw">r10221026@ntu.edu.tw</a>, or submit an issue on GitHub (or any other way).</p>
 
                     </main>
 

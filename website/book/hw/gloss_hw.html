@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -82,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../home.html">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../hw/gloss_hw.html" class="active"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.1.2.</strong> Solutions</div></li></ol></li><li class="chapter-item expanded "><a href="../hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../home.html">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../hw/gloss_hw.html" class="active"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><a href="../hw/week_01/sltn.html"><strong aria-hidden="true">1.1.2.</strong> Solutions</a></li></ol></li><li class="chapter-item expanded "><a href="../hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.2.</strong> Solutions</div></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../logs.html">Update and Upload Logs</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -117,6 +119,9 @@
                         <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/main/website/src/hw/gloss_hw.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -145,28 +150,70 @@
                     <main>
                         <h1 id="glossary-of-homeworks"><a class="header" href="#glossary-of-homeworks">Glossary of Homeworks</a></h1>
 <h2 id="-about-the-homework-files"><a class="header" href="#-about-the-homework-files">📁 About the Homework Files</a></h2>
-<p>We will try to supply the relevant homework screenshots, <code>.tex</code>, <code>.pdf</code>, and web view.</p>
+<p>We will try to supply the relevant homework screenshots, <code>.tex</code>, <code>.pdf</code>, and links to webpages.</p>
 <ul>
-<li>The <code>.png</code> files are the most reliable source. They are combined file of raw homework screenshots.</li>
-<li>The <code>.tex</code> files are generated for the convenience of those that wish to type down their own solutions. Commutative diagrams requires the <code>tikz-cd</code> package.</li>
-<li>The <code>.pdf</code> files serve both as a preview to the <code>.tex</code> file and a printable</li>
-<li>The webview is for aesthetic purposes.</li>
+<li>The <code>.png</code> files are the most reliable source. They are combined raw homework screenshots taken from textbooks.</li>
+<li>The <code>.tex</code> files are generated for the convenience of those that wish to type down their own solutions. The dependencies are as follows:
+<ul>
+<li>The commutative diagrams requires <code>tikzcd</code>.</li>
+<li>The embedded pictures requires <code>graphicx</code>.</li>
+<li>The bare minimum is <code>amsmath</code>, <code>amssymb</code>.</li>
+</ul>
+</li>
+<li>The <code>.pdf</code> files serve both as previews to the <code>.tex</code> files and printable documents.</li>
+<li>The webpages are for aesthetic purposes.</li>
 </ul>
 <h2 id="-useful-resources"><a class="header" href="#-useful-resources">🌱 Useful Resources</a></h2>
 <ul>
-<li><a href="https://q.uiver.app/">q.uiver</a> - GUI for drawing commutative diagrams that supports conversion to <code>tikz-cd</code> diagrams.</li>
-<li><a href="https://snip.mathpix.com/">mathpix</a> - website for converting math screenshots into LaTeX codes. Reliable and robust.</li>
+<li><a href="https://q.uiver.app/">q.uiver</a> - GUI for drawing commutative diagrams that supports conversion to <code>tikzcd</code> diagrams.</li>
+<li><a href="https://snip.mathpix.com/">mathpix</a> - Website for converting math screenshots into LaTeX codes. Reliable and robust.</li>
 </ul>
 <h2 id="-source-of-homeworks"><a class="header" href="#-source-of-homeworks">📚 Source of Homeworks</a></h2>
 <ul>
 <li>Week 01: [AtM] 2.14-16. <sup class="footnote-reference"><a href="#note">1</a></sup></li>
 <li>Week 02: [DF] 12.1's 2, 7, 11, 16 and 12.2's 14 (over \(\mathbb{R}\)).</li>
 </ul>
+<div class="footnote-definition" id="note"><sup class="footnote-definition-label">1</sup>
+<p>For confusion on the meaning of abbreviations of names appearing in this subsection, please take a look <a href="../home.html#references">here</a>.</p>
+</div>
 <h2 id="-combined-files"><a class="header" href="#-combined-files">📌 Combined files</a></h2>
 <p>To appear.</p>
-<div class="footnote-definition" id="note"><sup class="footnote-definition-label">1</sup>
-<p>For confusion on the meaning of abbreviations of names appearing in this subsection, please take a look <a href="../../home.html#references">here</a>.</p>
-</div>
+<h2 id="-homework-policies"><a class="header" href="#-homework-policies">📜 Homework Policies</a></h2>
+<h3 id="how-to-submit"><a class="header" href="#how-to-submit">How to Submit</a></h3>
+<p>You may submit via COOL's online submission system or hand it to TA in class.</p>
+<p>For the online system, either scanned copies or clear photos of your attempts, or typed ones are all allowed.</p>
+<h3 id="grading"><a class="header" href="#grading">Grading</a></h3>
+<p>We will generally give raw letter grades. Submissions without major mistakes and frequent minor mistakes will basically be given the raw letter grade A+ - after conversion, this roughly corresponds to a score of 93 on scale of 0 to 100.</p>
+<p>For the ones that are exceptionally good, few additional points will be added (within the range of the raw letter grade given), where &quot;goodness&quot; is roughly characterized as &quot;those that stands out from the rest of the submissions&quot;; this often means meeting a few of the following criteria:</p>
+<ul>
+<li>those with good presentation, such as:
+<ul>
+<li>well-structured arguments</li>
+<li>well-organized ideas</li>
+<li>good usage of notations and formalisms</li>
+<li>an emphasis on clearly presenting the core ideas</li>
+<li>a sense of authenticity</li>
+<li>few occurences of apparent grammatical errors and typos</li>
+</ul>
+</li>
+<li>those that attempted harder questions when it is not required by the description of the assignment</li>
+<li>those that demonstrated creative ideas and deep insights towards a problem</li>
+<li>those that verified the non-trivial details that others might have missed</li>
+</ul>
+<h3 id="policy-on-late-submissions"><a class="header" href="#policy-on-late-submissions">Policy on Late Submissions</a></h3>
+<p>Suppose a submission is late in <code>x</code> days. The grade of that submission will be penalized according to the following rules:</p>
+<ul>
+<li>For <code>0 &lt;= x &lt;= 3</code>, the letter grade will be adjusted downwards <code>ceil(x)</code> units of plus/minus grades.</li>
+<li>For <code>x &gt; 3</code>, the formula will be <code>3 + floor((x - 3) / 5)</code>.</li>
+</ul>
+<p>The decision boundary is a soft one; that is, when a submission is near a decision boundary, we will calculate towards the one that results in less penalty.</p>
+<h3 id="formula-for-final-grades-on-homeworks"><a class="header" href="#formula-for-final-grades-on-homeworks">Formula for Final Grades on Homeworks</a></h3>
+<p>Suppose the grades (converted to a scale of 0 to 100) of an individual student are - in ascending order - given by</p>
+<p><code>a[0], a[1], a[2], ... , a[n - 1]</code></p>
+<p>then the total grade is calculated by taking the sum</p>
+<p><code>a[0] + a[1] + a[2] + ... + a[n] - 0.50 * a[0] - 0.35 * a[1] - 0.20 * a[2]</code></p>
+<p>and divided by</p>
+<p><code>n - (0.50 + 0.35 + 0.20)</code>.</p>
 
                     </main>
 

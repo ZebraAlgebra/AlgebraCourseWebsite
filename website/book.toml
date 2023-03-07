@@ -11,6 +11,7 @@ mathjax-support = true
 default-theme = "rust"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/ZebraAlgebra/AlgebraCourseWebsite"
+edit-url-template = "https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/main/website/{path}"
 
 [output.html.print]
 enable = false
@@ -24,8 +25,8 @@ limit-results = 30       # maximum number of search results
 teaser-word-count = 30   # number of words used for a search result teaser
 use-boolean-and = true   # multiple search terms must all match
 boost-title = 1          # ranking boost factor for matches in headers
-boost-hierarchy = 2      # ranking boost factor for matches in page names
-boost-paragraph = 1      # ranking boost factor for matches in text
+boost-hierarchy = 0      # ranking boost factor for matches in page names
+boost-paragraph = 0      # ranking boost factor for matches in text
 expand = true            # partial words will match longer terms
 heading-split-level = 1  # link results to heading levels
 copy-js = true           # include Javascript code for search
