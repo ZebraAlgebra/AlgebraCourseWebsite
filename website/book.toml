@@ -12,6 +12,7 @@ default-theme = "rust"
 preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/ZebraAlgebra/AlgebraCourseWebsite"
 edit-url-template = "https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/main/website/{path}"
+additional-js = ["config_mathjax_fonts.js", "config_icon.js"]
 
 [output.html.print]
 enable = false
