@@ -1,6 +1,5 @@
 MathJax.Hub.Config({
-    jax: ["input/TeX", "input/MathML",
-        "output/SVG", "output/PreviewHTML"
+    jax: ["input/TeX", "input/MathML", "output/HTML-CSS", "output/SVG", "output/PreviewHTML"
     ],
     "HTML-CSS": {
         imageFont: null,

@@ -38,7 +38,7 @@ For the online system, either scanned copies or clear photos of your attempts, o
 
 ### Grading
 
-We will generally give raw letter grades. Submissions without major mistakes and frequent minor mistakes will basically be given the raw letter grade A+ - after conversion, this roughly corresponds to a score of 93 on scale of 0 to 100.
+We will generally give raw letter grades. Submissions without major mistakes and frequent minor mistakes will basically be given the raw letter grade A+ - after conversion, this roughly corresponds to a score of 93 on a scale of 0 to 100.
 
 For the ones that are exceptionally good, few additional points will be added (within the range of the raw letter grade given), where "goodness" is roughly characterized as "those that stands out from the rest of the submissions"; this often means meeting a few of the following criteria:
 * those with good presentation, such as:
@@ -54,23 +54,18 @@ For the ones that are exceptionally good, few additional points will be added (w
 
 ### Policy on Late Submissions
 
-Suppose a submission is late in `x` days. The grade of that submission will be penalized according to the following rules:
+Suppose a submission is late in \\(x\\) days. The grade of that submission will be penalized according to the following rules:
 
-* For `0 <= x <= 3`, the letter grade will be adjusted downwards `ceil(x)` units of plus/minus grades.
-* For `x > 3`, the formula will be `3 + floor((x - 3) / 5)`.
+* For \\(0\leq x\leq 3\\), the letter grade will be adjusted downwards \\(\lceil x \rceil\\) units of plus/minus grades.
+* For \\(x > 3\\), the formula will be \\(3 + \lfloor(x - 3) / 5\rfloor\\).
 
 The decision boundary is a soft one; that is, when a submission is near a decision boundary, we will calculate towards the one that results in less penalty.
 
 ### Formula for Final Grades on Homeworks
 Suppose the grades (converted to a scale of 0 to 100) of an individual student are - in ascending order - given by
 
-`a[0], a[1], a[2], ... , a[n - 1]`
+\\[a\_0,a\_1,\dotsc,a\_{n-1}\\]
 
-then the total grade is calculated by taking the sum
+then the total grade is calculated as a weighted average, given by
 
-`a[0] + a[1] + a[2] + ... + a[n] - 0.50 * a[0] - 0.35 * a[1] - 0.20 * a[2]`
-
-and divided by
-
-`n - (0.50 + 0.35 + 0.20)`.
-
+\\[\frac{\left(\sum\_{i=0}\^{n-1}a\_i\right)-0.50a\_0-0.35a\_1-0.20a\_2}{n-(0.50+0.35+0.20)}.\\]
