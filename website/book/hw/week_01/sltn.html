@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../home.html">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../hw/gloss_hw.html"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><a href="../../hw/week_01/sltn.html" class="active"><strong aria-hidden="true">1.1.2.</strong> Solutions</a></li></ol></li><li class="chapter-item expanded "><a href="../../hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.2.</strong> Solutions</div></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../../logs.html">Update and Upload Logs</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../home.html">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../hw/gloss_hw.html"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item expanded "><a href="../../hw/week_01/sltn.html" class="active"><strong aria-hidden="true">1.1.2.</strong> Solutions</a></li></ol></li><li class="chapter-item "><a href="../../hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.2.2.</strong> Solutions</div></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../../logs.html">Update and Upload Logs</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -116,10 +116,10 @@
                     <h1 class="menu-title">Algebra II Homeworks</h1>
 
                     <div class="right-buttons">
-                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/website_content" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/main/website/src/hw/week_01/sltn.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/website-content/website/src/hw/week_01/sltn.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -151,10 +151,10 @@
                         <h1 id="solutions---week-01"><a class="header" href="#solutions---week-01">Solutions - Week 01</a></h1>
 <p>The following fact about directed set would be useful for what follows.</p>
 <blockquote>
-<p><strong>Fact</strong>: Given a directed set \(I\), a finite subset \(J\subseteq I\), there exists \(i \in I\) with \(i\geq j\) for each \(j\) in \(J\).</p>
+<p><strong>Fact</strong>: Given directed set \(I\) and a finite subset \(J\subseteq I\), there exists \(i \in I\) with \(i\geq j\) for each \(j\in J\).</p>
 </blockquote>
-<p>Note: we call such \(i\) an upper bound of \(J\).</p>
-<p>Here is a proof of this fact by induction. The case where \(|J|=2\) is clear. Otherwise partition \(J\) into two disjoint nonempty subsets \(J_1, J_2\). By induction, we may find upper bounds \(i_1, i_2\) for \(J_1, J_2\), and by choosing \(i\) to be an upper bound of \(i_1, i_2\), we are done.</p>
+<p>In this case, we call such \(i\) an upper bound of \(J\).</p>
+<p>Here is a proof of this fact by induction. The case where \(|J|=1,2\) is clear. Otherwise partition \(J\) into two disjoint nonempty subsets \(J_1, J_2\). By induction, we may find upper bounds \(i_1, i_2\) for \(J_1, J_2\), and by choosing \(i\) to be an upper bound of \(i_1, i_2\), we are done.</p>
 <p>For what follows, we denote \(\varinjlim_i M_i\) as \(M\), and \(C:=\bigoplus_iM_i\).</p>
 <h2 id="problem-2"><a class="header" href="#problem-2">Problem 2</a></h2>
 <p><code>(AtM II.15)</code></p>
@@ -163,7 +163,7 @@
 <li>For any \(x\in M\), there is some \(i\in I\), \(x_i\in M_i\) with \(\mu_i(x_i)=x\).</li>
 <li>For any \(x_i\in M_i\), if \(\mu_i(x_i) = 0\), then there is some \(j\geq i\) with \(\mu_{ij} x_i\) = 0.</li>
 </ol>
-<p>For the first item, express \(x=\sum_i \mu_{i\in J} x_i\) for some finite subset \(J\) of \(I\); the fact that we can express it in such a way follows from the definition of \(M\) in Problem 1.</p>
+<p>For the first item, express \(x=\sum_{i\in J} \mu_i x_i\) for some finite subset \(J\) of \(I\); the fact that we can express it in such a way follows from the definition of \(M\) in Problem 1.</p>
 <p>Choose an upper bound \(i^\ast\) of \(J\). We get:</p>
 <p>\[x=\sum_i \mu_{i} x_i=\sum_i\mu_{i^\ast}\mu_{ii^\ast}x_i=\mu_{i^\ast}\left(\sum_{i}\mu_{ii^\ast}x_i\right)\]</p>
 <p>For the second item, the idea is similar. Suppose in \(C\) that</p>
@@ -176,7 +176,7 @@
 <p>For example, if we take \(A\) to be \(\mathbb{Z}\),</p>
 <ol>
 <li>then with \(I\) being discrete with two points, \(M_i=\mathbb{Z}\), the element \((1,1)\in M=\mathbb{Z}^2\) is not the image of any single element from any \(M_i\).</li>
-<li>and with \(I\) of the form \(\bullet\leftarrow\bullet\rightarrow\bullet\) (the roof), with the system being \(\mathbb{Z}\overset{0}{\leftarrow}\mathbb{Z}\overset{\text{id}}{\rightarrow}\mathbb{Z}\), then any element in the rightmost \(\mathbb{Z}\) mapsto \(0\) in \(M\simeq\mathbb{Z}\) (here the \(\mathbb{Z}\)).</li>
+<li>and with \(I\) of the form \(\bullet\leftarrow\bullet\rightarrow\bullet\) (the roof), with the system being \(\mathbb{Z}\overset{0}{\leftarrow}\mathbb{Z}\overset{\text{id}}{\rightarrow}\mathbb{Z}\), then any element in the rightmost \(\mathbb{Z}\) mapsto \(0\) in \(M\simeq\mathbb{Z}\).</li>
 </ol>
 <h2 id="problem-3"><a class="header" href="#problem-3">Problem 3</a></h2>
 <p><code>(AtM II.16)</code></p>
@@ -185,7 +185,7 @@
 <li>We need to show that \(M\) has such property.</li>
 <li>and that \(M\) is unique (up to isomorphsim) with such property.</li>
 </ol>
-<p>For the first item, say we are given such \(N,\{\alpha_i:M_i\to N\}_i\).</p>
+<p>For the first item, say we are given such commuting cone \(N,\{\alpha_i:M_i\to N\}_i\).</p>
 <ul>
 <li>(a) By the universal property of \(C\), we have a unique map \(C\to N\) making any triangles with vertices \(M_i,C,N\) commute.</li>
 <li>(b) The kernel of \(C\to M\) is generated by elements of a particular form, so by verifying such map is zero on these elements, we get a map \(M\to N\) such that any triangles with vertices \(M_i,M,N\) commute.</li>
@@ -196,12 +196,11 @@
 <p>(This remark requires some basic knowledge in category theory)</p>
 <p>One can think of the Problem 3 more categorically.</p>
 <ul>
-<li>Note first that a system \(N,\{\alpha_i:M_i\to N\}_i\) is the same as an element in:</li>
-</ul>
-<p>\[\varprojlim_i\operatorname{Hom}_A(M_i,N)\]</p>
-<ul>
 <li>
-<p>This construction can be regarded as a contravariant functor from the category of \(A\)-modules to the category of sets.</p>
+<p>Note first that given a commuting cone \(N,\{\alpha_i:M_i\to N\}_i\) is the same as an element in: \[\varprojlim_i\operatorname{Hom}_A(M_i,N)\]</p>
+</li>
+<li>
+<p>The construction \[N\mapsto\varprojlim_i\operatorname{Hom}_A(M_i,N)\] can be promoted to a contravariant functor from the category of \(A\)-modules to the category of sets.</p>
 </li>
 <li>
 <p>The statement in Problem 3 roughly says that such functor is <em>representable</em> with the representative being \(M\); that is, we have a natural isomorphism (in the variable \(N\)):</p>
@@ -209,7 +208,7 @@
 </ul>
 <p>\[\varprojlim_i\operatorname{Hom}_A(M_i,N)\simeq\operatorname{Hom}_A(\varinjlim_i M_i,N):=\operatorname{Hom}_A(M,N)\]</p>
 <ul>
-<li>If we denote the functor \(N\to \operatorname{Hom}_A(M, N)\) as \(h_M\), the Yoneda embedding implies that at the level of functors, if we have \(h_M\simeq h_{M'}\), then at the level of objects we have \(M\simeq M'\).</li>
+<li>If we denote the functor \(N\to \operatorname{Hom}_A(M, N)\) as \(h_M\), the Yoneda embedding implies that at the level of functors, if we have \(h_M\simeq h_{M'}\), then at the level of objects we have \(M\simeq M'\). In this sense the uniqueness of \(M\) is clear.</li>
 </ul>
 
                     </main>

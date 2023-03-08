@@ -7,7 +7,10 @@
 |`000B0`|`20230303`|🪄|Overview Pages: fix typo, grammar, broken links|
 |`101A0`|`20230303`|🌱|Week 01 Overview, Questions|
 |`101A1`|`20230307`|🌱|Week 01 Solutions|
+|`101B0`|`20230308`|🪄|Week 01 Solutions|
 |`102A0`|`20230306`|🌱|Week 02 Overview, Questions|
+|`102B0`|`20230308`|🪄|Week 02 Questions|
+
 
 ### Label types
 🌱 - upload; 🪄 - update
