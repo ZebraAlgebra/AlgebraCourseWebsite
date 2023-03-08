@@ -55,10 +55,6 @@ where \\(n\\) is the power of \\(p\\) dividing \\(a\\) in \\(R\\).
 
 `[DF 12.1.16]`
 
-The following set of exercises outlines a proof of Theorem 5 in the special case where \\(R\\) is a Euclidean Domain using a matrix argument involving row and column operations.
-
-This applies in particular to the cases \\(R=\mathbb{Z}\\) and \\(R=F[x]\\) of interest in the applications and is computationally useful.
-
 Let \\(R\\) be a Euclidean Domain and let \\(M\\) be an \\(R\\)-module.
 
 Prove that \\(M\\) is finitely generated if and only if there is a surjective \\(R\\)-homomorphism \\(\varphi: R^n \rightarrow M\\) for some integer \\(n\\) (this is true for any ring \\(R\\) ).
