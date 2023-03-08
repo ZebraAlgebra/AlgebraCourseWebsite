@@ -20,6 +20,7 @@ We will try to supply the relevant homework screenshots, `.tex`, `.pdf`, and lin
 
 * Week 01: [AtM] 2.14-16. [^note]
 * Week 02: [DF] 12.1's 2, 7, 11, 16 and 12.2's 14 (over \\(\mathbb{R}\\)).
+* Week 03: ([AtM] 2's 3, 12; 3's 2, 9) + ([Lang] XVI's 4, 5).
 
 [^note]: For confusion on the meaning of abbreviations of names appearing in this subsection, please take a look [here](../home.md#references).
 

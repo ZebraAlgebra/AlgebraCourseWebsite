@@ -11,9 +11,9 @@
     - [Week 02](./hw/week_02/home.md)
         - [Questions](./hw/week_02/qtns.md)
         - [Solutions]()
-    <!-- - [Week 03]()
-        - [Questions]()
-        - [Solutions]() -->
+    - [Week 03](./hw/week_03/home.md)
+        - [Questions](./hw/week_03/qtns.md)
+        <!-- - [Solutions]() -->
     <!-- - [Week 04]()
         - [Questions]()
         - [Solutions]()
