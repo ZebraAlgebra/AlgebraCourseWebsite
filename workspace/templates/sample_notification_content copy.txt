@@ -1,0 +1,28 @@
+<div style="font-family: 'Trebuchet MS', 'Roboto', sans-serif;">
+    <h3>🗓️ <strong>Due Date</strong></h3>
+    <ul style="list-style-type: square;">
+        <li style="text-decoration: underline;">MM/DD HH:mm (ddd.)</li>
+    </ul>
+    <h3>📝 <strong>Homework Description</strong></h3>
+    <ul style="list-style-type: square;">
+        <li>Complete the following from <a class="inline_disabled" style="color: crimson;" target="_blank" rel="noopener" href="https://www.amazon.com/Introduction-Commutative-Algebra-Addison-Wesley-Mathematics/dp/0201407515">[AtM]</a>.</li>
+        <li>Complete the following from <a class="inline_disabled" style="color: crimson;" href="https://link.springer.com/book/10.1007/978-3-662-12492-5" target="_blank" rel="noopener">[GM]</a>.</li>
+        <li>Complete the following from <a class="inline_disabled" style="color: crimson;" href="https://link.springer.com/book/10.1007/978-1-4684-9458-7" target="_blank" rel="noopener">[Ser]</a>.</li>
+        <li>Complete the following from <a class="inline_disabled" style="color: crimson;" href="https://link.springer.com/book/10.1007/978-1-4613-0041-0" target="_blank" rel="noopener">[Lang]</a>.</li>
+        <li>Complete the following from <a class="inline_disabled" style="color: crimson;" href="https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347" target="_blank" rel="noopener">[DF]</a>:</li>
+        <li>Complete the following questions given in class:</li>
+        <li>Read the following (you DO NOT need to submit this item).</li>
+    </ul>
+    <h3>📌 <strong>Submission</strong></h3>
+    <ul style="list-style-type: square;">
+        <li>You may submit your work via COOL's online submission system or hand in your works to TA in class.</li>
+        <li>Late submission is discouraged. The grading of each assignment will take into consideration whether the assignment is submitted on time.</li>
+    </ul>
+    <h3>📂 <strong>Files / Links</strong></h3>
+    <ul style="list-style-type: square;">
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://cool.ntu.edu.tw/api/v1/courses/25046/files/3531865" data-api-returntype="File">.pdf file</a></li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://cool.ntu.edu.tw/api/v1/courses/25046/files/3531837" data-api-returntype="File">.tex file</a> (the <span style="font-family: 'Sourece Sans Pro', sans-serif; background-color: #dddddd;">tikzcd</span> package is required for the commutative diagrams to render correctly in your LaTeX editor in case there are any of them).</li>
+        <li><a class="inline_disabled" style="color: olive;" href="https://cool.ntu.edu.tw/courses/25046/files/3539565/download" target="_blank" rel="noopener" data-api-endpoint="https://cool.ntu.edu.tw/api/v1/courses/25046/files/3539565" data-api-returntype="File">homework screenshot</a></li>
+        <li><a class="inline_disabled" style="color: crimson;" target="_blank">web view</a></li>
+    </ul>
+</div>

@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Solutions - Week 02</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Host homework files, notes of Algebra II in mdbook.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../home.html">Overview</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Homework lists</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../hw/gloss_hw.html"><strong aria-hidden="true">1.</strong> Glossary of Homeworks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_01/home.html"><strong aria-hidden="true">1.1.</strong> Week 01</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_01/qtns.html"><strong aria-hidden="true">1.1.1.</strong> Questions</a></li><li class="chapter-item "><a href="../../hw/week_01/sltn.html"><strong aria-hidden="true">1.1.2.</strong> Solutions</a></li></ol></li><li class="chapter-item expanded "><a href="../../hw/week_02/home.html"><strong aria-hidden="true">1.2.</strong> Week 02</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_02/qtns.html"><strong aria-hidden="true">1.2.1.</strong> Questions</a></li><li class="chapter-item expanded "><a href="../../hw/week_02/sltn.html" class="active"><strong aria-hidden="true">1.2.2.</strong> Solutions</a></li></ol></li><li class="chapter-item "><a href="../../hw/week_03/home.html"><strong aria-hidden="true">1.3.</strong> Week 03</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../hw/week_03/qtns.html"><strong aria-hidden="true">1.3.1.</strong> Questions</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.3.2.</strong> Solutions</div></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Additional Notes</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../notes/files.html"><strong aria-hidden="true">2.</strong> Glossary of Additional Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">2.1.</strong> Colimit and Limits</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../../logs.html">Update and Upload Logs</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Algebra II Homeworks</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/website_content" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/ZebraAlgebra/AlgebraCourseWebsite/tree/website-content/website/src/hw/week_02/sltn.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="solutions---week-02"><a class="header" href="#solutions---week-02">Solutions - Week 02</a></h1>
+<h2 id="problem-1"><a class="header" href="#problem-1">Problem 1</a></h2>
+<p><code>[DF 12.1.2]</code></p>
+<blockquote>
+<p><strong>Settings</strong>: A module \(M\), over an integral domain \(R\). A maximal set of linearly independent elements in \(M\) over \(R\) is also given (denoted as \(x_1,\dotsc,x_n\)). The submodule generated by these \(x_i\) is written as \(N\).</p>
+</blockquote>
+<p>Recall that there are two statements:</p>
+<ul>
+<li>(a) Show \(N\cong R^n\), and  \(M / N\) torsion.</li>
+<li>(b) Conversely, if \(M\) contains a submodule \(N\) satisying (a), then \(M\) has rank \(n\).</li>
+</ul>
+<p>For (a), the elements \(x_i\) defines a map \(R^n\to N\). Its image is \(N\) with trivial kernel (by \(R\)-independence). To show that the quotient is torsion, say an element \(x+M\) is not torsion, then \(x\) cannot be writen as an \(R\)-combination of elements in the \(x_i\), contradicting maximality.</p>
+<p>For (b), recall that the notion of rank is defined as the maximum number of \(R\)-independent elements in \(M\) (see [DF p.460]). We only need to show \(\operatorname{rank}(M)&lt; n+1 \). Following the hint, suppose we are given another set of \(R\)-linearly independent elements:</p>
+<p>\[y_1,\dotsc,y_{n+1}\]</p>
+<p>As \(M/N\) is torsion, we may find \(r_{j}^i\) and nonzero \(s_j\) with</p>
+<p>\[\sum_ir_j^ix_i=s_jy_j,\quad j=1,\dotsc,n+1\]</p>
+<p>Consider this as an equation over the quotient field (here we denote as \(K\)) of \(R\).</p>
+<p>The coefficients \(r_j^i\) defines an \(n+1\) by \(n\) matrix \(A\).</p>
+<p>Multiply on the left on both sides of the equation by an \(n+1\) by \(n+1\) invertible matrix \(B\) defined by some coefficients \(t_j^i\) so that \(BA\) is in row echelon form.</p>
+<p>By looking at the last row, we get:</p>
+<p>\[t_{n+1}^iy_i=0\]</p>
+<p>This is a nontrivial \(K\)-linear relation of \(y_1,\dotsc,y_{n+1}\), from which one can get a nontrivial \(R\)-linear relation of \(y_1,\dotsc,y_{n+1}\) by clearing denominators.</p>
+<h2 id="problem-2"><a class="header" href="#problem-2">Problem 2</a></h2>
+<p><code>[DF 12.1.7]</code></p>
+<p>Recall that we want to show</p>
+<p>\[
+\left(A_1 \oplus A_2 \oplus \cdots \oplus A_m\right) /\left(B_1 \oplus B_2 \oplus \cdots \oplus B_m\right) \cong\left(A_1 / B_1\right) \oplus\left(A_2 / B_2\right) \oplus \cdots \oplus\left(A_m / B_m\right) \text {.
+}
+\]</p>
+<p>The idea is that the maps \(A_i\to A_i/B_i\) gives a map \(\bigoplus_i A_i\to\bigoplus_i \left(A_i/B_i\right)\). By verifying that this map is surjective with kernel \(\bigoplus_i B_i\), one gets the result.</p>
+<h3 id="remark"><a class="header" href="#remark">Remark</a></h3>
+<p>More generally, by recognizing quotients and direct sums as colimits, the result is a trivial consequence of the fact that colimits commutes with colimits.</p>
+<h2 id="problem-3"><a class="header" href="#problem-3">Problem 3</a></h2>
+<p><code>[DF 12.1.11]</code></p>
+<blockquote>
+<p><strong>Settings</strong>: \(R\) is a PID, \(M=R/a\) where \(a\) is a nonzero element in \(R\).</p>
+</blockquote>
+<p>Note that</p>
+<p>\[p^{k}M=p^k(R/(a))=((p^k)+(a))/(a)\]</p>
+<p>so we have</p>
+<p>\[p^{k-1}M/p^{k}M=((p^{k-1})+(a))/((p^{k})+(a))\]</p>
+<p>Suppose the maximal power of \(p\) dividing \(a\) is \(n\) and \(a=p^nb\). We have</p>
+<p>\[(p^k)+(a)=(p^k,p^nb)=(p^{\min(k, n)}b)\]</p>
+<p>From this the assertion is clear.</p>
+<h2 id="problem-4"><a class="header" href="#problem-4">Problem 4</a></h2>
+<p><code>[DF 12.1.16]</code></p>
+<p>By the universal property of free modules, given a set of generators \(x_1,\dotsc,x_n\) of \(M\), we have a unique morphism \(R^n\) to \(M\) by \(e_i\mapsto x_i\). The assertion that \(x_1,\dotsc,x_n\) generates \(M\) can be verified to be equivalent to the assertion that the map is surjective.</p>
+<p>Conversely, given a surjective map \(R^n\to M\), the image of each \(e_i\) defines a set of generators of \(M\).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../hw/week_02/qtns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../hw/week_03/home.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../hw/week_02/qtns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../hw/week_03/home.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../config_mathjax_fonts.js"></script>
+        <script src="../../config_icon.js"></script>
+
+
+    </div>
+    </body>
+</html>

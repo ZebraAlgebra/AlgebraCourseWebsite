@@ -1,0 +1,22 @@
+<div style="font-family: 'Trebuchet MS', 'Roboto', sans-serif;">
+    <h3>🗓️ <strong>Due Date</strong></h3>
+    <ul style="list-style-type: square;">
+        <li style="text-decoration: underline;">{due-date}</li>
+    </ul>
+    <h3>📝 <strong>Homework Description</strong></h3>
+    <ul style="list-style-type: square;">
+        <li>(Optional) Read none from Class (you DO NOT need to submit this item).</li>
+    </ul>
+    <h3>📌 <strong>Submission</strong></h3>
+    <ul style="list-style-type: square;">
+        <li>You may submit your work via COOL's online submission system or hand in your works to TA in class.</li>
+        <li>Late submission is discouraged. The grading of each assignment will take into consideration whether the assignment is submitted on time.</li>
+    </ul>
+    <h3>📂 <strong>Files / Links</strong></h3>
+    <ul style="list-style-type: square;">
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/pdf/test.pdf" data-api-returntype="File">.pdf file</a></li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/tex/test.tex" data-api-returntype="File">.tex file</a> (the <span style="font-family: 'Sourece Sans Pro', sans-serif; background-color: #dddddd;">tikzcd</span> package is required for the commutative diagrams to render correctly in your LaTeX editor in case there are any of them).</li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/files/png/test.png" data-api-returntype="File">.png file (combined homework screenshot)</a></li>
+        <li><a class="inline_disabled" style="color: olive;" target="_blank" data-api-endpoint="https://zebraalgebra.github.io/AlgebraCourseWebsite/my-first-book/book/hw/week_test/qtns.html" data-api-returntype="File">web view</a></li>
+    </ul>
+</div>
