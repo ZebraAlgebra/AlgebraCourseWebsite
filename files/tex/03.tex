@@ -49,19 +49,70 @@ Prove that
     \item iii) Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A \rightarrow S_0^{-1} A$ is bijective).
 \end{itemize}
 
+
 % Problem 5
-[Nakayama's lemma]
 
-Let $R$ be any ring and $M$ a finitely generated module.
+Let $\varphi: A \rightarrow B$ be a commutative ring homomorphism.
 
-Let $N$ be the radical of $R$.
+Let $E$ be an $A$-module and $F$ a $B$-module.
 
-If $N M=M$ show that $M=0$.
+Let $F_A$ be the $A$-module obtained from $F$ via the operation of $A$ on $F$ through $\varphi$, that is for $y \in F_A$ and $a \in A$ this operation is given by
 
-[Hint: Observe that the proof of Nakayama's lemma still holds.]
+$$
+(a, y) \mapsto \varphi(a) y .
+$$
+
+Show that there is a natural isomorphism
+
+$$
+\operatorname{Hom}_B\left(B \otimes_A E, F\right) \approx \operatorname{Hom}_A\left(E, F_A\right)
+$$
 
 % Problem 6
+
+[The norm]
+
+Let $B$ be a commutative algebra over the commutative ring $R$ and assume that $B$ is free of rank $r$.
+
+Let $A$ be any commutative $R$-algebra.
+
+Then $A \otimes B$ is both an $A$-algebra and a $B$-algebra.
+
+We view $A \otimes B$ as an $A$-algebra, which is also free of rank $r$.
+
+If $\left\{e_1, \ldots, e_r\right\}$ is a basis of $B$ over $R$, then
+
+$$
+1_A \otimes e_1, \ldots, 1_A \otimes e_r
+$$
+
+is a basis of $A \otimes B$ over $A$.
+
+We may then define the norm
+
+$$
+N=N_{A \otimes B, A}: A \otimes B \rightarrow A
+$$
+
+as the unique map which coincides with the determinant of the regular representation.
+
+In other words, if $b \in B$ and $b_B$ denotes multiplication by $b$, then
+
+$$
+N_{B, R}(b)=\operatorname{det}\left(b_B\right)
+$$
+
+and similarly after extension of the base. Prove:
+
 \begin{itemize}
-    \item (a) Let $J$ be a two-sided nilpotent ideal of $R$. Show that $J$ is contained in the radical.
-    \item (b) Conversely, assume that $R$ is Artinian. Show that its radical is nilpotent, i.e., that there exists an integer $r \geqq 1$ such that $N^r=0$. [Hint: Consider the descending sequence of powers $N^r$, and apply Nakayama to a minimal finitely generated left ideal $L \subset N^{\infty}$ such that $N^{\infty} L \neq 0$.]
+    \item (a) Let $\varphi: A \rightarrow C$ be a homomorphism of $R$-algebras. Then the following diagram is commutative:
+\[\begin{tikzcd}
+	{A\otimes{B}} & {C\otimes{B}} \\
+	A & C
+	\arrow["\varphi\otimes1", from=1-1, to=1-2]
+	\arrow["N", from=1-2, to=2-2]
+	\arrow["N"', from=1-1, to=2-1]
+	\arrow["\varphi"', from=2-1, to=2-2]
+\end{tikzcd}\]
+    \item (b) Let $x, y \in A \otimes B$. Then $N\left(x \otimes_B y\right)=N(x) \otimes N(y)$. [Hint: Use the commutativity relations $e_i e_j=e_j e_i$ and the associativity.]
 \end{itemize}

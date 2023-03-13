@@ -30,7 +30,7 @@
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
-        <script  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
     <div id="body-container">
@@ -182,23 +182,44 @@ since \(M_k, N_k\) are vector spaces over a field.]</p>
 </ul>
 <h2 id="problem-5"><a class="header" href="#problem-5">Problem 5</a></h2>
 <p><code>[Lang XVI.4]</code></p>
-<p>[Nakayama's lemma]</p>
-<p>Let \(R\) be any ring and \(M\) a finitely generated module.</p>
-<p>Let \(N\) be the radical of \(R\).</p>
-<p>If \(N M=M\) show that \(M=0\).</p>
-<p>[Hint: Observe that the proof of Nakayama's lemma still holds.]</p>
+<p>Let \(\varphi: A \rightarrow B\) be a commutative ring homomorphism.</p>
+<p>Let \(E\) be an \(A\)-module and \(F\) a \(B\)-module.</p>
+<p>Let \(F_A\) be the \(A\)-module obtained from \(F\) via the operation of \(A\) on \(F\) through \(\varphi\), that is for \(y \in F_A\) and \(a \in A\) this operation is given by</p>
+<p>\[
+(a, y) \mapsto \varphi(a) y .
+\]</p>
+<p>Show that there is a natural isomorphism</p>
+<p>\[
+\operatorname{Hom}_B\left(B \otimes_A E, F\right) \approx \operatorname{Hom}_A\left(E, F_A\right)
+\]</p>
 <h2 id="problem-6"><a class="header" href="#problem-6">Problem 6</a></h2>
 <p><code>[Lang XVI.5]</code></p>
+<p>[The norm]</p>
+<p>Let \(B\) be a commutative algebra over the commutative ring \(R\) and assume that \(B\) is free of rank \(r\).</p>
+<p>Let \(A\) be any commutative \(R\)-algebra.</p>
+<p>Then \(A \otimes B\) is both an \(A\)-algebra and a \(B\)-algebra.</p>
+<p>We view \(A \otimes B\) as an \(A\)-algebra, which is also free of rank \(r\).</p>
+<p>If \( \left\{e_1, \ldots, e_r\right\} \) is a basis of \(B\) over \(R\), then</p>
+<p>\[
+1_A \otimes e_1, \ldots, 1_A \otimes e_r
+\]</p>
+<p>is a basis of \(A \otimes B\) over \(A\).</p>
+<p>We may then define the norm</p>
+<p>\[
+N=N_{A \otimes B, A}: A \otimes B \rightarrow A
+\]</p>
+<p>as the unique map which coincides with the determinant of the regular representation.</p>
+<p>In other words, if \(b \in B\) and \(b_B\) denotes multiplication by \(b\), then</p>
+<p>\[
+N_{B, R}(b)=\operatorname{det}\left(b_B\right)
+\]</p>
+<p>and similarly after extension of the base. Prove:</p>
 <ul>
-<li>
-<p>(a) Let \(J\) be a two-sided nilpotent ideal of \(R\).</p>
-<p>Show that \(J\) is contained in the radical.</p>
-</li>
-<li>
-<p>(b) Conversely, assume that \(R\) is Artinian.</p>
-<p>Show that its radical is nilpotent, i.e., that there exists an integer \(r \geqq 1\) such that \(N^r=0\).</p>
-<p>[Hint: Consider the descending sequence of powers \(N^r\), and apply Nakayama to a minimal finitely generated left ideal \(L \subset N^{\infty}\) such that \(N^{\infty} L \neq 0\).]</p>
-</li>
+<li>(a) Let \(\varphi: A \rightarrow C\) be a homomorphism of \(R\)-algebras. Then the following diagram is commutative:</li>
+</ul>
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJBXFxvdGltZXN7Qn0iXSxbMSwwLCJDXFxvdGltZXN7Qn0iXSxbMCwxLCJBIl0sWzEsMSwiQyJdLFswLDEsIlxcdmFycGhpXFxvdGltZXMxIl0sWzEsMywiTiJdLFswLDIsIk4iLDJdLFsyLDMsIlxcdmFycGhpIiwyXV0=&embed" width="353" height="304" style="border-radius: 8px; border: none;"></iframe>
+<ul>
+<li>(b) Let \(x, y \in A \otimes B\). Then \(N\left(x \otimes_B y\right)=N(x) \otimes N(y)\). [Hint: Use the commutativity relations \(e_i e_j=e_j e_i\) and the associativity.]</li>
 </ul>
 
                     </main>

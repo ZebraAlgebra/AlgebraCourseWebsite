@@ -9,10 +9,11 @@
 |`101A1`|`20230307`|🌱|Week 01 Solutions|
 |`101B0`|`20230308`|🪄|Week 01 Solutions|
 |`102A0`|`20230306`|🌱|Week 02 Overview, Questions|
-|`102A1`|`20230312`|🪄|Week 02 Solutions|
+|`102A1`|`20230312`|🌱|Week 02 Solutions|
 |`102B0`|`20230308`|🪄|Week 02 Questions|
 |`103A0`|`20230308`|🌱|Week 03 Overview, Questions|
 |`103B0`|`20230312`|🪄|Week 03 Questions|
+|`103B1`|`20230313`|🪄|Week 03 Questions|
 
 
 ### Label types

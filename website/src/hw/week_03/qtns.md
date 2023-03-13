@@ -52,31 +52,66 @@ Prove that
 
 * iii) Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., \\(A \rightarrow S\_0\^{-1} A\\) is bijective).
 
-
 ## Problem 5
 
 `[Lang XVI.4]`
 
-[Nakayama's lemma]
+Let \\(\varphi: A \rightarrow B\\) be a commutative ring homomorphism.
 
-Let \\(R\\) be any ring and \\(M\\) a finitely generated module.
+Let \\(E\\) be an \\(A\\)-module and \\(F\\) a \\(B\\)-module.
 
-Let \\(N\\) be the radical of \\(R\\).
+Let \\(F\_A\\) be the \\(A\\)-module obtained from \\(F\\) via the operation of \\(A\\) on \\(F\\) through \\(\varphi\\), that is for \\(y \in F\_A\\) and \\(a \in A\\) this operation is given by
 
-If \\(N M=M\\) show that \\(M=0\\).
+\\[
+(a, y) \mapsto \varphi(a) y .
+\\]
 
-[Hint: Observe that the proof of Nakayama's lemma still holds.]
+Show that there is a natural isomorphism
+
+\\[
+\operatorname{Hom}\_B\left(B \otimes\_A E, F\right) \approx \operatorname{Hom}\_A\left(E, F\_A\right)
+\\]
 
 ## Problem 6
 
 `[Lang XVI.5]`
 
-* (a) Let \\(J\\) be a two-sided nilpotent ideal of \\(R\\).
+[The norm]
 
-    Show that \\(J\\) is contained in the radical.
+Let \\(B\\) be a commutative algebra over the commutative ring \\(R\\) and assume that \\(B\\) is free of rank \\(r\\).
 
-* (b) Conversely, assume that \\(R\\) is Artinian.
+Let \\(A\\) be any commutative \\(R\\)-algebra.
 
-    Show that its radical is nilpotent, i.e., that there exists an integer \\(r \geqq 1\\) such that \\(N\^r=0\\).
+Then \\(A \otimes B\\) is both an \\(A\\)-algebra and a \\(B\\)-algebra.
 
-    [Hint: Consider the descending sequence of powers \\(N\^r\\), and apply Nakayama to a minimal finitely generated left ideal \\(L \subset N\^{\infty}\\) such that \\(N\^{\infty} L \neq 0\\).]
+We view \\(A \otimes B\\) as an \\(A\\)-algebra, which is also free of rank \\(r\\).
+
+If \\( \left\\{e\_1, \ldots, e\_r\right\\} \\) is a basis of \\(B\\) over \\(R\\), then
+
+\\[
+1\_A \otimes e\_1, \ldots, 1\_A \otimes e\_r
+\\]
+
+is a basis of \\(A \otimes B\\) over \\(A\\).
+
+We may then define the norm
+
+\\[
+N=N\_{A \otimes B, A}: A \otimes B \rightarrow A
+\\]
+
+as the unique map which coincides with the determinant of the regular representation.
+
+In other words, if \\(b \in B\\) and \\(b\_B\\) denotes multiplication by \\(b\\), then
+
+\\[
+N\_{B, R}(b)=\operatorname{det}\left(b\_B\right)
+\\]
+
+and similarly after extension of the base. Prove:
+
+
+* (a) Let \\(\varphi: A \rightarrow C\\) be a homomorphism of \\(R\\)-algebras. Then the following diagram is commutative:
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwwLCJBXFxvdGltZXN7Qn0iXSxbMSwwLCJDXFxvdGltZXN7Qn0iXSxbMCwxLCJBIl0sWzEsMSwiQyJdLFswLDEsIlxcdmFycGhpXFxvdGltZXMxIl0sWzEsMywiTiJdLFswLDIsIk4iLDJdLFsyLDMsIlxcdmFycGhpIiwyXV0=&embed" width="353" height="304" style="border-radius: 8px; border: none;"></iframe>
+
+* (b) Let \\(x, y \in A \otimes B\\). Then \\(N\left(x \otimes\_B y\right)=N(x) \otimes N(y)\\). [Hint: Use the commutativity relations \\(e\_i e\_j=e\_j e\_i\\) and the associativity.]
